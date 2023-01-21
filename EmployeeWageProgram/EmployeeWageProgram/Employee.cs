@@ -11,8 +11,8 @@ namespace EmployeeWageProgram
         public void EmployeeWage()
         {
             //Constants
-            int IS_PART_TIME = 1;
-            int IS_FULL_TIME = 2;
+            const int IS_PART_TIME = 1;
+            const int IS_FULL_TIME = 2;
             int EMP_RATE_PER_HOUR = 20;
             //Variables
             int empHrs = 0;
@@ -20,25 +20,26 @@ namespace EmployeeWageProgram
             Random random = new Random();
             //Computation
             int empCheck = random.Next(0, 3);
-            if(empCheck == IS_FULL_TIME)
+            switch (empCheck)
             {
-                empHrs = 8;
-                Console.WriteLine("\nFull Time Employee");
+                case IS_FULL_TIME:
+                    empHrs = 8;
+                    Console.WriteLine("\nFull Time Employee");
+                    break;
+                case IS_PART_TIME:
+                    empHrs = 4;
+                    Console.WriteLine("\nPart Time Employee");
+                    break;
+                default:
+                    empHrs = 0;
+                    Console.WriteLine("\nEmployee is Absent");
+                    break;
+
             }
-            else if(empCheck == IS_PART_TIME) 
-            {
-                empHrs = 4;
-                Console.WriteLine("\nPart Time Employee");
-            }
-            else
-            {
-                empHrs = 0;
-                Console.WriteLine("\nEmployee is Absent");
-            }
-             
             empWage = empHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Emp Wage : " + empWage);
         }
-       
     }
 }
+            
+            
