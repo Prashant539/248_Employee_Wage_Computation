@@ -8,14 +8,15 @@ namespace EmployeeWageProgram
 {
     public class Employee
     {
+        //Constants
+        const int IS_PART_TIME = 1;
+        const int IS_FULL_TIME = 2;
+        const int EMP_RATE_PER_HOUR = 20;
+        const int NUM_OF_WORKING_DAYS = 20;
+        const int MAX_HRS_IN_MONTH = 100;
         public void EmployeeWage()
         {
-            //Constants
-            const int IS_PART_TIME = 1;
-            const int IS_FULL_TIME = 2;
-            const int EMP_RATE_PER_HOUR = 20;
-            const int NUM_OF_WORKING_DAYS = 20;
-            const int MAX_HRS_IN_MONTH = 100;
+            
             //Variables
             int empHrs = 0;
             int totalEmpHrs = 0;
