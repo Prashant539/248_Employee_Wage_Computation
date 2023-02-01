@@ -11,8 +11,8 @@ namespace EmployeeWageProgram
         //Constants
         const int IS_PART_TIME = 1;
         const int IS_FULL_TIME = 2;
-        
-        public void EmployeeWage(string company, int empRatePerHour, int numOfWorking, int maxHoursPerMonth)
+
+        public static int EmployeeWage(string company, int empRatePerHour, int numOfWorking, int maxHoursPerMonth)
         {
        
             //Variables
@@ -47,7 +47,8 @@ namespace EmployeeWageProgram
                 Console.WriteLine("Day: "  + totalWorkingDays + "Emp Hrs : " + empHrs);
             }
             int totalEmpWage = totalEmpHrs * empRatePerHour;
-            Console.WriteLine("Total Emp Wage : "  + totalEmpWage);
+            Console.WriteLine("Total Emp Wage for company: " + company  + " is " + totalEmpWage);
+            return totalEmpWage;
            
             Console.ReadLine();
         }
