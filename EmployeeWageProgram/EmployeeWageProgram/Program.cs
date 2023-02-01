@@ -8,7 +8,8 @@ namespace EmployeeWgeProgram
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
             Employee employee = new Employee();
-            employee.EmployeeWage();
+            employee.EmployeeWage("DMart", 20, 2, 10);
+            employee.EmployeeWage("Reliance", 20, 4, 10);
         }
     }
 }
