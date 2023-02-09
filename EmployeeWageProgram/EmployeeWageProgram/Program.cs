@@ -7,10 +7,12 @@ namespace EmployeeWgeProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
-            //Employee employee = new Employee();
-            Employee.EmployeeWage("DMart", 20, 2, 10);
-            Employee.EmployeeWage("Reliance", 20, 4, 10);
-            Console.ReadLine();
+            Employee Dmart = new Employee("Dmart", 20, 2, 10);
+            Employee Reliance = new Employee("Reliance", 20, 4, 10);
+            Dmart.computeEmpWage();
+            Console.WriteLine(Dmart.toString());
+            Reliance.computeEmpWage();
+            Console.WriteLine(Reliance.toString());
         }
     }
 }
